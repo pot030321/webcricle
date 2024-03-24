@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="login-left">
+            <div class="login-header">
+                <h1>Đăng Nhập</h1>
+                <p>Please login use the plastform</p>
+            </div>
+        <form class="login-form">
+            <div class="login-form-content">
+                <div class="form-item">
+                    <label for="email">Enter Email</label>
+                    <input type="text" id="email">
+                </div>
+                <div class="form-item">
+                    <label for="Password">Enter Password</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="form-item">
+                    <div class="checkbox">
+                        <input type="checkbox" id="Lưu Đăng Nhập" checked>
+                        <label for="Lưu Đăng Nhập" class="checkboxLabel">Lưu Đăng Nhập</label>
+                    </div>
+                </div>
+                <button type="submit">
+                    <a href="http://127.0.0.1:5500/folder-main/index.html" id="loginButton" style="color: white; text-decoration: none;padding:5px 10px;display:inline-block;vertical-align:middle">
+                        Đăng Nhập
+                    </a>
+                    <script>
+                        document.addEventListener('keydown', function(event) {
+                            if (event.key === 'Enter') {
+                                // Simulate a click on the login button when Enter is pressed
+                                document.getElementById('loginButton').click();
+                            }
+                        });
+                        </script>
+                </button>
+                
+            </div>
+            <div class="login-form-footer">
+                <a href="#">
+                    <img width="40" 
+                        src="https://tse1.mm.bing.net/th?id=OIP.Ua5AXhtGRgPuisZVmetclQHaFL&pid=Api&rs=1&c=1&qlt=95&w=156&h=109"
+                    alt="">Đăng Nhập Bằng FaceBook
+                </a>
+                <a href="#">
+                    <img width="30" 
+                    src="http://pluspng.com/img-png/google-logo-png-open-2000.png"
+                    alt="">Đăng Nhập Bằng Google
+                </a>
+            </div>
+        </form>
+        </div>
+        <div class="login-right">
+            <img src="./back-login3.jpg" >
+        </div>
+    </div>
+</body>
+</html>

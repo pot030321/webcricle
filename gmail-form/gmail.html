@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-gmail.css">
+    <title>Hỗ trợ Mail</title>
+</head>
+<body>
+   
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>get in touch</h3>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your mail" required>
+            <input type="text" id="phone" placeholder="Enter your phone number" required>
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Gửi</button>
+            <button>
+            <a href="http://127.0.0.1:5500/folder-main/potonl.html" class="back-button">Trang chủ</a>
+            </button>
+        </form>
+    </div>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "potcompany@gmail.com",
+                Password: "FFBA97B6221AF1A7AABB9E52D431F9936CB3",
+                To: 'quanganhzzz8@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "complain",
+                Body: "Name: " + document.getElementById("name").value +
+                    "<br> Email: " + document.getElementById("email").value +
+                    "<br> Phone num: " + document.getElementById("phone").value +
+                    "<br> Message: " + document.getElementById("message").value
+            }).then(
+                message => alert("Thư gửi Thành Công")
+            );
+
+        }
+    </script>
+</body>
+</html>
